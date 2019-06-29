@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+/*******
+ * @author Basil Gafoor
+ *
+ *This Question was asked at Cisco first round of Interview
+ *
+ *Given a String containing multiple alphabets.
+ *Find the first occuring unique / non repeating alphabet 
+ *For Example String "abcdacbdeffabg" returns e , e is the first non repeating unique element.
+ */
+public class CiscoQ2 {
+
+	public static void main(String[] args) {
+		System.out.println("Enter the String: ");
+		Scanner sc = new Scanner(System.in);
+		String s1 = sc.nextLine();
+		int len=s1.length();
+		boolean flag = false;
+		for(int i=0;i<len;i++) {
+			for(int j=0;j<len;j++) {
+				if(i!=j) {
+					if(s1.charAt(i)==s1.charAt(j)) {
+						break;
+					}
+					else if((s1.charAt(i)!=s1.charAt(j))&&(j==len-1)) {
+						System.out.println("First unique alphabet is: "+s1.charAt(i));
+						flag =true;
+						break;
+					}
+				}
+			}
+			if(flag==true)
+				break;
+			if((flag==false)&&(i==len-1)) {
+				System.out.println("No unique alphabet in string: "+s1);
+			}
+		}
+		
+	}
+	
+	
+	
+	
+}
