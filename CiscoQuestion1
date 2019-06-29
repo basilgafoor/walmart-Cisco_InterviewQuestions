@@ -7,7 +7,7 @@ import java.util.Scanner;
  *
  *Given a String containing multiple 0s and 1s.
  *Find the maximum number of occurence of consecutive 1s 
- *
+ *For Example, If a String is 111110101, it must return 6 as the String contains 6 consecutive 1s.
  */
 
 
